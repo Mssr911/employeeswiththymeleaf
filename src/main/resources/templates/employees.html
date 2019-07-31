@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>Thymeleaf rest demo</head>
+
+<body>
+    <h3>List of all employees</h3>
+
+    <hr>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="tempEmployee : ${employeesList}">
+                <td th:text="${tempEmployee.id}"></td>
+                <td th:text="${tempEmployee.first_name}"></td>
+                <td th:text="${tempEmployee.last_name}"></td>
+                <td th:text="${tempEmployee.email}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
